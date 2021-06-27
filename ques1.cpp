@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
 
-void remvDupli(char* s)
+void remvDupli(char* s1)
 {
-    if (s[0] == '0')
+    if (s1[0] == '0')
         return;
  
-    if (s[0] == s[1])
+    if (s1[0] == s1[1])
 	{
         int i = 0;
-        while (s[i] != '0') {
-            s[i] = s[i + 1];
+        while (s1[i] != '0') {
+            s1[i] = s1[i + 1];
             i++;
         }
  
-        remvDupli(s);
+        remvDupli(s1);
     }
-    remvDupli(s + 1);
+    remvDupli(s1+ 1);
 } 
 int main()
 {
